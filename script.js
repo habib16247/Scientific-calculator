@@ -577,6 +577,7 @@ function trigo(callback, angel) {
   return callback(angel);
 }
 
+// Inverse Trigonometric function
 function inv_trigo(callback, value) {
   let angel = callback(value);
 
