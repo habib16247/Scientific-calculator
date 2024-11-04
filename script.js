@@ -93,18 +93,21 @@ let calculator_buttons = [
     symbol: 7,
     formula: 7,
     type: "number",
+    class: "numbers"
   },
   {
     name: "8",
     symbol: 8,
     formula: 8,
     type: "number",
+    class: "numbers"
   },
   {
     name: "9",
     symbol: 9,
     formula: 9,
     type: "number",
+    class: "numbers"
   },
   {
     name: "division",
@@ -141,18 +144,21 @@ let calculator_buttons = [
     symbol: 4,
     formula: 4,
     type: "number",
+    class: "numbers"
   },
   {
     name: "5",
     symbol: 5,
     formula: 5,
     type: "number",
+    class: "numbers"
   },
   {
     name: "6",
     symbol: 6,
     formula: 6,
     type: "number",
+    class: "numbers"
   },
   {
     name: "multiplication",
@@ -189,18 +195,21 @@ let calculator_buttons = [
     symbol: 1,
     formula: 1,
     type: "number",
+    class: "numbers"
   },
   {
     name: "2",
     symbol: 2,
     formula: 2,
     type: "number",
+    class: "numbers"
   },
   {
     name: "3",
     symbol: 3,
     formula: 3,
     type: "number",
+    class: "numbers"
   },
   {
     name: "subtraction",
@@ -237,6 +246,7 @@ let calculator_buttons = [
     symbol: 0,
     formula: 0,
     type: "number",
+    class: "numbers"
   },
   {
     name: "calculate",
@@ -303,7 +313,7 @@ function createCalculatorButtons() {
     }
 
     const row = document.querySelector(".row:last-child");
-    row.innerHTML += `<button id="${button.name}">
+    row.innerHTML += `<button id="${button.name}" class="${button.class}">
                                 ${button.symbol}
                             </button>`;
 

@@ -16,29 +16,29 @@ html{
 }
 
 .calculator{
-    position: absolute;
+    max-width: 600px;
+    position: relative;
+    margin: auto;
+}
 
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
+.calculator h1 {
+    font-size: clamp(20px, 5vw, 30px);
 }
 
 .calc-container{
     background-color: #1d1d1d;
-
-    width: 600px;
+    max-width: 600px;
     height: auto;
-
-    border-radius: 0 0 30px 30px;
+    border-radius: 25px;
 }
 
 .output{
-    width: 100%;;
+    width: 100%;
+    background: #000;
 }   
 
 .operation{
-    width: 600px;
+    max-width: 600px;
     height: 70px;
 
     color: #878787;
@@ -60,7 +60,7 @@ html{
 }
 
 .result{
-    width: 600px;
+    max-width: 600px;
     height: 140px;
 
     color: #FFF;
@@ -85,11 +85,14 @@ html{
 
 
 .input{
-    background-color: #FFF;
-
+    background-color: #8ea8b36e;
     border-radius: 0 0 25px 25px;
     border: 1px solid #1d1d1d;
     height: 340px;
+    -webkit-border-radius: 0 0 25px 25px;
+    -moz-border-radius: 0 0 25px 25px;
+    -ms-border-radius: 0 0 25px 25px;
+    -o-border-radius: 0 0 25px 25px;
 }
 
 .row {
@@ -99,28 +102,42 @@ html{
 }
 
 .row button{
-    width: 50px;
+    width: 95px;
     height: 50px;
-
-    font-size: 1.5em;
-
+    font-size: 1.2em;
+    font-weight: 700;
     border: none;
-    border-radius: 50%;
+    border-radius: 10%;
     background-color: transparent;
-
-    margin : 8px;
-
+    padding: 2px;
+    margin: 8px 5px;
+    border: 1px solid #1d1d1d;
+    color: #5ea7d4;
     cursor: pointer;
+    -webkit-border-radius: 10%;
+    -moz-border-radius: 10%;
+    -ms-border-radius: 10%;
+    -o-border-radius: 10%;
+    background-image: linear-gradient(45deg,rgb(35, 35, 35),rgb(23, 23, 23),black);
+    border-top: 2px solid rgb(71, 70, 70);
+    border-right: 2px solid rgb(28, 28, 28);
 }
 
 .row button:hover{
-    font-weight: bold;
+    font-weight: 900;
+    /* background: linear-gradient(to left, #171110, #352d28); */
+    /* color: #FFF; */
+    box-shadow: 2px 2px 0px rgb(0, 0, 0),
+    inset 5px 5px 10px rgb(0, 0, 0),
+    2px -1px 4px rgb(0, 0, 0) ,
+    inset -1px 2px 4px rgb(0, 0, 0),
+    3px 3px 4px rgb(3, 3, 3);
 }
 
 .row #calculate{
     color: #FFF;
     background-color: #46e0bc;
-    width : 121px;
+    width : clamp(120px, 100vw, 210px);
     border-radius: 50px;
 }
 .row #delete{
@@ -132,6 +149,10 @@ html{
     color: #18b893;
 }
 
+.row button.numbers {
+    color: #f5faf9;
+}
+
 .input button span{
     font-size: 0.6em;
     position: absolute;
@@ -141,4 +162,53 @@ html{
     background-color: #1d1d1d !important;
     color: #FFF !important;
     border-radius: 10px !important;
+}
+
+
+.calcno{
+    width: 20px;
+    height: 20px;
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    text-align: center;
+    align-content: center;
+    padding: 20px;
+    margin:5px;
+    text-align: center;
+    /* background-color: #3b969f; */
+    /* background-image: linear-gradient( #24646a, #b9e5e9); */
+    border-radius: 5%;
+    /* border: 1px solid rgb(7, 7, 7); */
+    border-top: 2px solid rgb(71, 70, 70);
+    border-right: 2px solid rgb(28, 28, 28);
+
+
+    background-image: linear-gradient(45deg,rgb(35, 35, 35),rgb(23, 23, 23),black);
+ 
+
+    box-shadow: 3px -2px 5px rgb(8, 8, 8),
+    inset -2px 2px 3px rgb(0, 0, 0),
+    2px -1px 4px rgb(0, 0, 0) ,
+    inset -5px 2px 4px rgb(26, 26, 26),
+    -8px 8px 10px rgb(0, 0, 0);
+
+}
+.calcno:hover{
+    border-top:0px solid rgb(6, 6, 6);
+    border-right: 0px solid rgb(0, 0, 0);
+    box-shadow: 2px 2px 0px rgb(0, 0, 0),
+    inset 5px 5px 10px rgb(0, 0, 0),
+    2px -1px 4px rgb(0, 0, 0) ,
+    inset -1px 2px 4px rgb(0, 0, 0),
+    3px 3px 4px rgb(3, 3, 3);
+    color:rgb(96, 96, 96);
+    font-size: small;
+
+    text-align: center;
+}
+
+@media (max-width: 467px) {
+    .row button{
+        font-size: 0.8em;
+    }
 }
