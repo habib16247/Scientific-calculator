@@ -252,6 +252,46 @@ let calculator_buttons = [
   },
 ];
 
+// key binding for keyboard input, including trigonometric function
+const keyBindings = {
+  "0": "0",
+  "1": "1",
+  "2": "2",
+  "3": "3",
+  "4": "4",
+  "5": "5",
+  "6": "6",
+  "7": "7",
+  "8": "8",
+  "9": "9",
+  "+": "addition",
+  "-": "subtraction",
+  "*": "multiplication",
+  "/": "division",
+  "%": "percent",
+  ".": "point",
+  "(": "open-parenthesis",
+  ")": "close-parenthesis",
+  "Enter": "calculate",
+  "Backspace": "delete",
+  "Delete": "clear",
+  "r": "rad",
+  "d": "deg",
+  "^": "power",
+  "s": "sin",
+  "c": "cos",
+  "t": "tan",
+  "S": "asin",
+  "C": "acos",
+  "T": "atan",
+  "a": "ANS",
+  "l": "log",
+  "L": "ln",
+  "e": "e",
+  "E": "exp",
+  "!": "factorial",
+}
+
 // create calculator btns
 function createCalculatorButtons() {
   const btns_per_row = 8;
@@ -295,6 +335,23 @@ input_element.addEventListener("click", (event) => {
     }
   });
 });
+
+
+// keydown event listener for keyboard input.
+document.addEventListener("keydown", e => {
+  const key = e.key;
+  const buttonName = keyBindings[key]
+  console.log(buttonName)
+
+  if (buttonName) {
+    const button = calculator_buttons.find(btn => btn.name === buttonName)
+    console.log(button)
+    if (button) {
+      calculator(button)
+    }
+  }
+})
+
 
 //calculator
 function calculator(button) {
